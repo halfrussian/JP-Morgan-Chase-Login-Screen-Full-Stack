@@ -8,7 +8,6 @@ import { BsChevronDown} from "react-icons/bs";
 
 const AccountPage = () => {
  
-
   const backToLogin = (e) => {
     e.preventDefault();
     window.location = 'http://localhost:3000/'
@@ -17,7 +16,7 @@ const AccountPage = () => {
         <>
             <Wrapper>
  
-              <div className='top-nav bg-blue-700'>
+              <div className='top-nav '>
                 <div className=' flex justify-between' >
                     <div className="left-container flex mt-5">
                         <IconContext.Provider value={{ size: "25px"}}>
@@ -55,6 +54,16 @@ const AccountPage = () => {
                         <h1 className='text-white top-greeting'>Good Afternoon!</h1>
                 </div>
             </div>
+
+            <div className='bg-blue-600'>
+              <div className='blue-bar flex justify-between '>
+                <div>Accounts</div>
+                <div>Pay & Transfer</div>
+                <div>Investments</div>
+                <div>Security & Privacy</div>
+              </div>
+            </div>
+            
       
            
             </Wrapper>
@@ -65,11 +74,30 @@ const AccountPage = () => {
 
 const Wrapper = styled.div`
 
+
+.blue-bar {
+  color: white;
+  padding:10px;
+  margin-left: 100px;
+  font-size: 21px;
+  width: 50%;
+  
+}
+
 .top-greeting {
     font-size: 27px;
     margin-left: 100px;
 }
 
+
+@media(max-width: 1200px) {
+  .blue-bar{
+    width: 100%;
+    font-size: 18px;
+    padding:20px;
+  margin-left: 0px;
+  }
+}
 
 @media(max-width: 760px) {
     .flag {
@@ -136,6 +164,8 @@ const Wrapper = styled.div`
 }
 .top-nav {
   position: sticky;
+  background: rgb(0,181,255);
+ background: linear-gradient(0deg, rgba(4,81,255,1) 0%, rgba(0,23,255,1) 100%);
 }
 
 `

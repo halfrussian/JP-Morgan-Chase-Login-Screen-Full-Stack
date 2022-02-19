@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     res.send('home')
 })
 
-mongoose.connect('mongodb+srv://joshmidla:Loverslane69@cluster0.qgpgr.mongodb.net/chase?retryWrites=true&w=majority', 
+mongoose.connect('', 
 () => {console.log('mongodb connnected')})
 
 app.listen(5000, () => console.log('port listening'))

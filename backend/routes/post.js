@@ -4,7 +4,7 @@ const Post = require('../models/Post');
 
 
 
-//i cant get all the users for some reason?????
+
 router.get('/getAll', async (req, res) => {
     try {
         const getAll = await Post.find();
